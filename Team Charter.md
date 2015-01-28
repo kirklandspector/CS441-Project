@@ -32,7 +32,7 @@ All members should participate is all aspects of the project in at least some wa
 * Veracious Video Editor
   * Anthony will be able to assist others in need of help regarding the filming process.
 
- ##Protocols
+##Protocols 
 * Intervention Protocol
   * The group will adhere to an intervention protocol if a team member is not preforming to team expectations. The team will ask the member why the he has not been able to get his work done and if he will within a 24 hour time period. If the member is unable to explain, the other members of the group will have this reflect in their team evaluations regarding this member.
 * Meeting Tardiness Protocol
