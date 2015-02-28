@@ -11,13 +11,13 @@
       google.visualization.drawChart(
 	  {
         "containerId": "visualization_div",
-        "dataSourceUrl": 'https://www.google.com/fusiontables/DataSource?docid=1AXFY1Sb2nyhMCqJtgEsRAkSx021gYECfP7JYFOyB',
+        "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
         "query":"SELECT * FROM 1AXFY1Sb2nyhMCqJtgEsRAkSx021gYECfP7JYFOyB",
         "refreshInterval": 5,
-        //"chartType": "ColumnChart",
+        "chartType": "ColumnChart",
         "options": 
 		{
-		"isStacked: true,
+		"isStacked": "true",
         }
 	});
    }
