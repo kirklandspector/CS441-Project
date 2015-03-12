@@ -1,0 +1,17 @@
+<style shim-shadowdom>
+    
+    body.core-narrow {
+      padding: 8px;
+    }
+    
+    paper-tabs, core-toolbar {
+      background-color: #4CAF50;
+      color: #fff;
+      box-shadow: 0px 3px 2px #A5D6A7;
+    }
+    
+    core-toolbar paper-tabs {
+      box-shadow: none;
+    }
+    
+</style>

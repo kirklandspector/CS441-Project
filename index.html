@@ -3,42 +3,36 @@
 
 <head>
     <!-- 1. Load webcomponents.min.js for polyfill support. -->
-    <!-- Used to be webcomponents.min.js and wouldn't work so I removed .min...? -->
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-
-    <!-- 2. Use an HTML Import to bring in the element. -->
-    <link rel="import"
-          href="bower_components/core-selector/core-selector.html">
     
+    <!-- Style -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="tab-styles.css" />
     <title>Marriage Stats</title>
 	
+    <!-- 3rd Party -->
 	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
 	
+    <!-- Our scripts -->
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="chart.js"></script>
 </head>
 
 <body style="font-family: 'Open Sans', san-serif ; border: 0 none;">
     
-    <style>
-        .item.core-selected {
-        background: #eee;
-        }
-    </style>
-
-    <core-selector selected="0">
-        <div class="item">Timing of First Birth</div>
-        <div class="item">Age</div>
-        <div class="item">Education Level</div>
-    </core-selector>
+    <paper-tabs selected="0">  
+        <paper-tab>Timing of First Birth</paper-tab>
+        <paper-tab>Age</paper-tab>
+        <paper-tab>Education Level</paper-tab>
+    </paper-tabs>
 
     <div class="container">
         <div class="page-header">
-            <h1>Effect of First Birth Timing</h1>
+            <h1>Marriage Statistics</h1>
         </div>
 
         <div class="container" id="visualization_div" style="height: 400px;"></div>

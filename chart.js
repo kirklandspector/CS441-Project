@@ -20,7 +20,7 @@ google.load('visualization', '1', {
                 "refreshInterval": 5,
                 "chartType": "ColumnChart",
                 "options": {
-                    "colors":["#94FF94", "#66FF66", "#47B247", "#296629"],
+                    "colors":["#4CAF50", "#66BB6A", "#81C784", "#A5D6A7"],
                     "titleTextStyle": {
                         color: "black",
                         fontName: "Open Sans",
