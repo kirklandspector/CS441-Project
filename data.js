@@ -17,9 +17,9 @@ marriage.birthQuery = "SELECT IndependentVariable, year5, year10, year15, year20
 //variables for main chart titles
 //TODO: Decide whether this title is neccessary
 marriage.currentTitle = "";
-marriage.ageTitle = "MUST WRITE TITLE";
-marriage.eduTitle = "MUST WRITE TITLE";
-marriage.birthTitle = "Divorce rates compared to timing of first birth relative to marriage";
+marriage.ageTitle = "Divorce Rates Related to Age When Married";
+marriage.eduTitle = "Divorce Rates Related to Level of Education";
+marriage.birthTitle = "Divorce Rates Related to Timing of First Birth Relative to Marriage";
 
 //variables for horizontal titles
 marriage.currentHorTitle = "";
