@@ -10,8 +10,10 @@ var marriage = marriage || {};
 
 //variables for chart queries
 marriage.currentQuery = "";
-marriage.ageQuery = "MUST WRITE QUERY";
-marriage.eduQuery = "MUST WRITE QUERY";
+marriage.ageFQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Age-F'";
+marriage.ageMQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Age-M'";
+marriage.eduFQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Education-F'";
+marriage.eduMQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Education-M'";
 marriage.birthQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'FirstBirth'";
 
 //variables for main chart titles

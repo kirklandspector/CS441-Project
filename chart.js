@@ -12,7 +12,6 @@ google.load('visualization', '1', {
             packages: ['corechart']
         });
         function drawVisualization() {
-            //var queryText = encodeURIComponent("SELECT Category, year5 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH");
             google.visualization.drawChart({
                 "containerId": "visualization_div",
                 "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
