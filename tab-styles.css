@@ -5,13 +5,21 @@
     }
     
     paper-tabs, core-toolbar {
-      background-color: #4CAF50;
-      color: #fff;
-      box-shadow: 0px 3px 2px #A5D6A7;
+        background-color: #4CAF50;
+        color: #fff;
+        box-shadow: 0px 3px 2px #A5D6A7;
+    }
+
+    paper-tabs.blue::shadow #selectionBar{
+        background-color: #38d2d7;  
+    }
+
+    .blue paper-tab::shadow #ink {
+        color: #38d2d7;
     }
     
     core-toolbar paper-tabs {
-      box-shadow: none;
+        box-shadow: none;
     }
     
 </style>

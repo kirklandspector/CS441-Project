@@ -10,11 +10,11 @@ var marriage = marriage || {};
 
 //variables for chart queries
 marriage.currentQuery = "";
-marriage.ageFQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Age-F'";
-marriage.ageMQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Age-M'";
-marriage.eduFQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Education-F'";
-marriage.eduMQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'Education-M'";
-marriage.birthQuery = "SELECT IndependentVariable, year5, year10, year15, year20 FROM 1UF9oix8kvZpNtFL32lrMDa_j9pJtCi9SlPJL1YYH WHERE Category = 'FirstBirth'";
+marriage.ageFQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Age-F'";
+marriage.ageMQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Age-M'";
+marriage.eduFQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Education-F'";
+marriage.eduMQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Education-M'";
+marriage.birthQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'FirstBirth'";
 
 //variables for main chart titles
 //TODO: Decide whether this title is neccessary
