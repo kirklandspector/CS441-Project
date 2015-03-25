@@ -12,6 +12,7 @@ google.load('visualization', '1', {
             packages: ['corechart']
         });
         function drawVisualization() {
+            marriage.update();
             google.visualization.drawChart({
                 "containerId": "visualization_div",
                 "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',

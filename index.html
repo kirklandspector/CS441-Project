@@ -14,8 +14,12 @@
 	
     <!-- 3rd Party -->
 	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="bower_components/core-toolbar/core-selector.html">
+    <link rel="import" href="bower_components/core-toolbar/core-selection.html">
+    
 	
     <!-- Our scripts -->
     <script type="text/javascript" src="data.js"></script>
@@ -24,7 +28,7 @@
 
 <body style="font-family: 'Open Sans', san-serif ; border: 0 none;">
     
-    <paper-tabs selected="0">  
+    <paper-tabs ng-app="" core-select="marriage.update" selected="{{ selected }}">  
         <paper-tab>Timing of First Birth</paper-tab>
         <paper-tab>Age</paper-tab>
         <paper-tab>Education Level</paper-tab>

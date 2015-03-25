@@ -30,14 +30,29 @@ marriage.eduHor = "Level of Education When Married";
 marriage.birthHor = "Timing of First Birth Relative to Wedding";
 
 /**
-* init
+* update
 *
-* For the time being this function will init all the variables
-* to a default to build the graph. This might be changed when
-* polymer is introduced
+* This function will init and update all the variables
+* to polymer's current settings.
 */
-marriage.init = function () {
-    marriage.currentQuery = marriage.birthQuery;
-    marriage.currentTitle = marriage.birthTitle;
-    marriage.currentHorTitle = marriage.birthHor;
-}();
+marriage.update = function () {
+    var tabs = document.querySelector('paper-tabs');
+    tabs.addEventListener('core-select', function() {
+        if (tabs.selected == 0) {
+            marriage.currentQuery = marriage.birthQuery;
+            marriage.currentTitle = marriage.birthTitle;
+            marriage.currentHorTitle = marriage.birthHor;
+        }
+        else if (tabs.selected == 1) {
+            marriage.currentQuery = marriage.ageMQuery;
+            marriage.currentTitle = marriage.ageTitle;
+            marriage.currentHorTitle = marriage.ageHor;
+        }
+        else if (tabs.selected == 2) {
+            marriage.currentQuery = marriage.eduMQuery;
+            marriage.currentTitle = marriage.eduTitle;
+            marriage.currentHorTitle = marriage.eduHor;
+        }
+        console.log("Selected: " + tabs.selected);
+    }());
+}
