@@ -30,11 +30,21 @@ marriage.eduHor = "Level of Education When Married";
 marriage.birthHor = "Timing of First Birth Relative to Wedding";
 
 /**
-* update
-*
-* This function will init and update all the variables
-* to polymer's current settings.
-*/
+ * init
+ * 
+ * sets all current's to init tab selected
+marriage.initEvent = function() {
+    marriage.currentQuery = marriage.birthQuery;
+    marriage.currentTitle = marriage.birthTitle;
+    marriage.currentHorTitle = marriage.birthHor;
+}();
+
+/**
+ * update
+ *
+ * This function will init and update all the variables
+ * to polymer's current settings.
+ **/
 marriage.update = function () {
     var tabs = document.querySelector('paper-tabs');
     tabs.addEventListener('core-select', function() {
@@ -54,5 +64,5 @@ marriage.update = function () {
             marriage.currentHorTitle = marriage.eduHor;
         }
         console.log("Selected: " + tabs.selected);
-    }());
+    });
 }
