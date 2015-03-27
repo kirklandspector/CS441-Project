@@ -12,7 +12,10 @@ google.load('visualization', '1', {
             packages: ['corechart']
         });
         function drawVisualization() {
-            marriage.update();
+            //only spin off update call on the first tab switch
+            if (marriage.firstClick) {
+                marriage.update();
+            }
             google.visualization.drawChart({
                 "containerId": "visualization_div",
                 "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
@@ -67,6 +70,11 @@ google.load('visualization', '1', {
                             bold: false,
                             italic: false
                         }
+                    },
+                    "animation": {
+                        duration: 425,
+                        easing: 'out',
+                        startup: true
                     },
                     "isStacked": true
                 }

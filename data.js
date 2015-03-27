@@ -29,6 +29,9 @@ marriage.ageHor = "Age When Married";
 marriage.eduHor = "Level of Education When Married";
 marriage.birthHor = "Timing of First Birth Relative to Wedding";
 
+//represents if the user has click the screen yet
+marriage.firstClick = true;
+
 /**
  * init
  * 
@@ -64,6 +67,8 @@ marriage.update = function () {
             marriage.currentTitle = marriage.eduTitle;
             marriage.currentHorTitle = marriage.eduHor;
         }
+        
+        marriage.firstClick = false;//after first click make sure it's false
         drawVisualization();
     });
 }
