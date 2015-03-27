@@ -33,6 +33,7 @@ marriage.birthHor = "Timing of First Birth Relative to Wedding";
  * init
  * 
  * sets all current's to init tab selected
+ **/
 marriage.initEvent = function() {
     marriage.currentQuery = marriage.birthQuery;
     marriage.currentTitle = marriage.birthTitle;
@@ -63,6 +64,6 @@ marriage.update = function () {
             marriage.currentTitle = marriage.eduTitle;
             marriage.currentHorTitle = marriage.eduHor;
         }
-        console.log("Selected: " + tabs.selected);
+        drawVisualization();
     });
 }

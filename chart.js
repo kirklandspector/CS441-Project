@@ -72,4 +72,4 @@ google.load('visualization', '1', {
                 }
             })
         };
-        google.setOnLoadCallback(drawVisualization);
+google.setOnLoadCallback(drawVisualization);
