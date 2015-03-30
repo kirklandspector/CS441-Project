@@ -29,8 +29,10 @@ marriage.ageHor = "Age When Married";
 marriage.eduHor = "Level of Education When Married";
 marriage.birthHor = "Timing of First Birth Relative to Wedding";
 
-//represents if the user has click the screen yet
+//polymer vars
 marriage.firstClick = true;
+marriage.toggleStatus = false;//disabled or not
+marriage.toggleValue = false;//male is false / female is true
 
 /**
  * init
@@ -50,22 +52,60 @@ marriage.initEvent = function() {
  * to polymer's current settings.
  **/
 marriage.update = function () {
+    //find boths polyer elements in use
     var tabs = document.querySelector('paper-tabs');
+    var toggle = document.querySelector('paper-toggle-button');
+    
+    //update changes from toggle switch
+    toggle.addEventListener('core-change', function() {
+        if (toggle.disabled == false) {
+               marriage.toggleStatus = true;
+        }
+        else {
+            marriage.toggleStatus = false;
+        }
+        if (toggle.checked) {
+            marriage.toggleValue = true;
+        }
+        else {
+            marriage.toggleValue = false;
+        }
+        
+        marriage.firstClick = false;//after first click make sure it's false
+        drawVisualization();
+    });
+    
+    //get tabs setting and using toggle values update variables
     tabs.addEventListener('core-select', function() {
         if (tabs.selected == 0) {
             marriage.currentQuery = marriage.birthQuery;
             marriage.currentTitle = marriage.birthTitle;
             marriage.currentHorTitle = marriage.birthHor;
+            toggle.disabled = true;
         }
-        else if (tabs.selected == 1) {
+        else if (tabs.selected == 1 && !marriage.toggleValue) {
             marriage.currentQuery = marriage.ageMQuery;
             marriage.currentTitle = marriage.ageTitle;
             marriage.currentHorTitle = marriage.ageHor;
+            toggle.disabled = false;
         }
-        else if (tabs.selected == 2) {
+        else if (tabs.selected == 1 && marriage.toggleValue) {
+            marriage.currentQuery = marriage.ageFQuery;
+            marriage.currentTitle = marriage.ageTitle;
+            marriage.currentHorTitle = marriage.ageHor;
+            toggle.disabled = false;
+        }
+        else if (tabs.selected == 2 && !marriage.toggleValue) {
             marriage.currentQuery = marriage.eduMQuery;
             marriage.currentTitle = marriage.eduTitle;
             marriage.currentHorTitle = marriage.eduHor;
+            toggle.disabled = false;
+        }
+        else if (tabs.selected == 2 && marriage.toggleValue) {
+            marriage.currentQuery = marriage.eduFQuery;
+            marriage.currentTitle = marriage.eduTitle;
+            marriage.currentHorTitle = marriage.eduHor;
+            toggle.disabled = false;
         }
         
         marriage.firstClick = false;//after first click make sure it's false

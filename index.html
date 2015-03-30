@@ -18,6 +18,7 @@
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="bower_components/core-selector/core-selector.html">
+    <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
 	
     <!-- Our scripts -->
     <script type="text/javascript" src="data.js"></script>
@@ -39,7 +40,15 @@
 
         <div class="container" id="visualization_div" style="height: 400px;"></div>
     </div>
-
+    
+    <div class="container">
+        <div style="float: right;">
+            Male/Female
+            <paper-toggle-button ng-app="" core-change="marriage.update" class="fun" disabled>
+            </paper-toggle-button>
+        </div>
+    </div>
+    
     <footer class="footer">
         <div class="container">
             <p class="text-muted">Handsome Hubbies</p>
