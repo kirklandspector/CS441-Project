@@ -20,7 +20,7 @@ google.load('visualization', '1', {
                 "containerId": "visualization_div",
                 "dataSourceUrl": 'https://www.google.com/fusiontables/gvizdata?tq=',
                 "query": marriage.currentQuery,
-                "refreshInterval": 5,
+                "refreshInterval": 100,
                 "chartType": "ColumnChart",
                 "options": {
                     "colors":["#4CAF50", "#66BB6A", "#81C784", "#A5D6A7"],
