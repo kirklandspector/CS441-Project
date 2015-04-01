@@ -39,6 +39,7 @@ google.load('visualization', '1', {
                     },
                     "vAxis": {
                         "title": "Percent Divorced After XX Years",
+                        "maxValue": 1,
                         "textStyle": {
                             color: "black",
                             fontName: "Open Sans",
