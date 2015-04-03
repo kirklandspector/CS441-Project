@@ -19,6 +19,7 @@
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="bower_components/core-selector/core-selector.html">
     <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
 	
     <!-- Our scripts -->
     <script type="text/javascript" src="data.js"></script>
@@ -27,12 +28,17 @@
 
 <body style="font-family: 'Open Sans', san-serif ; border: 0 none;">
     
+    <!-- UNCOMMENT TO ADD TOOLBAR -->
+    <!--<core-toolbar>
+        <div flex>Marriage Statistics</div>
+    </core-toolbar>-->
+    
     <paper-tabs ng-app="" core-select="marriage.update" selected="0">  
         <paper-tab>Timing of First Birth</paper-tab>
         <paper-tab>Age</paper-tab>
         <paper-tab>Education Level</paper-tab>
     </paper-tabs>
-
+    
     <div class="container">
         <div class="page-header">
             <h1>Marriage Statistics</h1>
