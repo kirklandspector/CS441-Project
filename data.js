@@ -10,11 +10,11 @@ var marriage = marriage || {};
 
 //variables for chart queries
 marriage.currentQuery = "";
-marriage.ageFQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Age-F'";
-marriage.ageMQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Age-M'";
-marriage.eduFQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Education-F'";
-marriage.eduMQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'Education-M'";
-marriage.birthQuery = "SELECT B, C, D, E, F WHERE A CONTAINS 'FirstBirth'";
+marriage.ageFQuery = "select B, C, D, E, F where A contains 'Age-F'";
+marriage.ageMQuery = "select B, C, D, E, F where A contains 'Age-M'";
+marriage.eduFQuery = "select B, C, D, E, F where A contains 'Education-F'";
+marriage.eduMQuery = "select B, C, D, E, F where A contains 'Education-M'";
+marriage.birthQuery = "select B, C, D, E, F where A contains 'First Birth'";
 
 //variables for main chart titles
 //TODO: Decide whether this title is neccessary

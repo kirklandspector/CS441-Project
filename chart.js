@@ -11,7 +11,8 @@ google.load('visualization', '1', {'packages': ['corechart']});
 
 
 function initialize() {
-    var query = new google.visualization.Query('http://spreadsheets.google.com/ccc?key=1KB2xTrI0uF1glbcOt2TetEVjMKkkDjez2PV941hnwLE');
+    var opts = {sendMethod: 'auto'};
+    var query = new google.visualization.Query('http://spreadsheets.google.com/ccc?key=1KB2xTrI0uF1glbcOt2TetEVjMKkkDjez2PV941hnwLE', opts);
 
     query.setQuery(marriage.currentQuery);
 
@@ -25,7 +26,7 @@ function handleQueryResponse(response) {
         alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
         return;
     }
-
+    console.log("Got here");
     var data = response.getDataTable();
     var options = {
         colors: ["#4CAF50", "#66BB6A", "#81C784", "#A5D6A7"],
@@ -39,11 +40,13 @@ function handleQueryResponse(response) {
         title: marriage.currentTitle,
         titleFontSize: 12,
         bar: {
-            //strokecolor: "black", //This line doesn't work. I can't find the stroke parameter.
+            strokeColor: "black", //This line doesn't work. I can't find the stroke parameter.
             groupWidth: "90%"
         },
+        
         vAxis: {
             title: "Percent Divorced After XX Years",
+            maxValue: 1,
             textStyle: {
                 color: "black",
                 fontName: "Open Sans",
@@ -78,7 +81,7 @@ function handleQueryResponse(response) {
         },
         isStacked: true
     };
-    var chart = new google.visualization.BarChart(document.getElementById('visualization_div'));
+    var chart = new google.visualization.ColumnChart(document.getElementById('visualization_div'));
     chart.draw(data, options);
 }
 
